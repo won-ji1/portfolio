@@ -1,0 +1,8 @@
+/* 키보드 초점 표시: 브라우저 기본 1px 초점선 대신 두껍고 대비가 큰 테두리로 현재 위치를 구별 */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #1a73e8;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
