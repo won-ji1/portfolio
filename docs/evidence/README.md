@@ -8,13 +8,13 @@
 
 ## 자동 점검 결과 (`docs/evidence/auto/`)
 
-`docs/tools/check_site.py`로 커밋 `a6447c6`(사이트 내용 최종본)의 배포용 빌드(`python .github/pages_build.py --build`)를 점검한 결과입니다.
+`docs/tools/check_site.py`로 커밋 `62a10d4`(사이트 최종본)의 배포용 빌드(`python .github/pages_build.py --build`)를 점검한 결과입니다.
 공개 주소 `https://won-ji1.github.io/portfolio/` 요청을 같은 커밋의 `public/` 파일로 응답하게 해 배포 경로(/portfolio/)를 그대로 재현했습니다.
-환경: Chromium 153.0.8010.12 (Playwright, Linux) · 점검 시각 2026-10-31 03:49 KST (처음 점검 02:37, 커밋 c38640f 기준 → 최종 사이트 변경 후 재점검)
+환경: Chromium 153.0.8010.12 (Playwright, Linux) · 점검 시각 2026-10-31 04:02 KST (처음 점검 02:37 커밋 c38640f, 재점검 03:49 커밋 a6447c6 → 최종 사이트 변경 후 다시 점검)
 
 | 파일 | 내용 | 화면 폭 |
 | --- | --- | --- |
-| `report.json` | 5개 페이지 × 3개 폭 점검 결과, 내부 링크 34개, Tab 순서, 결함 목록(issues: 0건) | 1440·768·390px |
+| `report.json` | 5개 페이지 × 4개 폭 점검 결과, 내부 링크 34개, Tab 순서, '맨 위로' 버튼 겹침 스캔(toplink_overlaps: 0건), 테마 버튼 Enter 전환, 앵커 새로고침, 결함 목록(issues: 0건) | 1440·768·390·360px (겹침 스캔은 1440·900·768·390·360px × 창 높이 900·420px) |
 | `skip_link_390.png` | 대표 활동 페이지에서 첫 Tab 시 "본문 바로가기"와 3px 초점 테두리 표시 | 390px |
 | `keyboard_focus.png` | 소개 페이지에서 Tab 14회 후 초점 위치 표시 | 1440px |
 | `404_390.png` | 없는 주소(/portfolio/no-such-page/deep/) 접속 시 한국어 404 안내와 홈·소개·활동 링크 | 390px |
@@ -22,11 +22,11 @@
 
 ## 개선 전 자동 점검 결과 (`docs/evidence/auto_before/`)
 
-1차 배포 커밋 `d53123c`의 배포용 빌드를 같은 점검 스크립트(이후 `docs/tools/check_site.py`로 저장소에 추가)로 2026-10-31 01:52 KST에 점검한 결과입니다. 환경: Chromium 153.0.8010.12 (Playwright, Linux).
+1차 배포 커밋 `d53123c`의 배포용 빌드를 점검 스크립트의 초기 버전(이후 기능을 더해 `docs/tools/check_site.py`로 저장소에 추가, 초기 버전에는 본문 바로가기·404·겹침 항목이 없음)로 2026-10-31 01:52 KST에 점검한 결과입니다. 환경: Chromium 153.0.8010.12 (Playwright, Linux).
 
 | 파일 | 내용 | 화면 폭 |
 | --- | --- | --- |
 | `390_home_before.png` | 개선 전 홈 화면. 제목 "한지원입니/다", 소개 "있습니/다"처럼 단어 중간 줄바꿈, 활동 요약이 "1차 결과 대…"로 잘림 | 390px |
 | `report_before.json` | 개선 전 점검 기록. 결함 0건이지만 Tab 초점이 `outline auto 1px`(브라우저 기본값), 메뉴 링크 폭 32px로 측정됨 → 2차 개선의 근거 | 1440·768·390px |
 
-참고: `docs/evidence/auto/`의 결과는 사이트 내용의 마지막 변경 커밋 `a6447c6` 빌드로 다시 점검한 것입니다. 그 뒤 커밋은 `docs/` 폴더만 바꿉니다.
+참고: `docs/evidence/auto/`의 결과는 사이트의 마지막 변경 커밋 `62a10d4` 빌드로 점검한 것입니다. 그 뒤 커밋은 `docs/` 폴더만 바꿉니다.
