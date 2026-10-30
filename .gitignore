@@ -10,3 +10,16 @@
 **/resources/_gen/
 **/.hugo_build.lock
 /.github-pages-setup-backups/
+
+# 로컬 미리보기·도구가 만드는 파일 (작업 때마다 불필요한 변경 방지)
+/site/public/
+/site/resources/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.log
