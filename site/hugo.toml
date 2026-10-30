@@ -27,3 +27,22 @@ ShowPostNavLinks = false
 ShowCodeCopyButtons = false
 hideSummary = false
 mainSections = ["activities"]
+
+# 주요 메뉴: 표시 이름과 도착 페이지를 일치시킴
+[[menu.main]]
+identifier = "about"
+name = "소개"
+pageRef = "/about"
+weight = 10
+
+[[menu.main]]
+identifier = "activities"
+name = "활동"
+pageRef = "/activities"
+weight = 20
+
+[[menu.main]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/won-ji1"
+weight = 30
