@@ -46,3 +46,18 @@ identifier = "github"
 name = "GitHub"
 url = "https://github.com/won-ji1"
 weight = 30
+
+# 홈 첫 화면: 이름·짧은 소개·핵심 영역 바로가기
+[params.homeInfoParams]
+Title = "안녕하세요, 한지원입니다"
+Content = """
+법학을 공부하며 **로스쿨 진학**을 준비하고 있습니다. 목표는 IT 분야를 잘 아는 **IT 변호사**가 되는 것입니다.
+
+- [자기소개 보기](about/) — 관심 분야, 학습 목표, 역량
+- [활동 보기](activities/) — 대표 활동: 로스쿨 진학 준비
+"""
+
+[[params.socialIcons]]
+name = "github"
+title = "GitHub (won-ji1)"
+url = "https://github.com/won-ji1"
