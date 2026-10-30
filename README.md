@@ -97,7 +97,19 @@ python .github/pages_build.py --build
 
 처음 한 번은 GitHub 저장소의 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 설정해야 합니다. 설정 전 첫 실행이 실패했다면 설정 후 Actions 화면에서 **Re-run jobs**를 누릅니다.
 
-## 6. 출처와 이용 조건
+## 6. 동작 점검 방법
+
+브라우저 자동 점검 스크립트로 화면 폭(1440·768·390px), 링크·앵커, 이미지·CSS 로딩, 키보드(Tab·Enter), 200% 확대, 404 페이지를 한 번에 확인할 수 있습니다.
+
+```bash
+pip install playwright
+python -m playwright install chromium
+python docs/tools/check_site.py https://won-ji1.github.io/portfolio/ docs/evidence/auto
+```
+
+`docs/evidence/auto/report.json`의 `issues`가 빈 목록이면 결함이 없는 것입니다. 점검 기록과 화면 캡처는 [`docs/evidence/`](docs/evidence/README.md)에 있습니다.
+
+## 7. 출처와 이용 조건
 
 | 자료 | 사용 위치 | 구분 | 출처·이용 조건 |
 | --- | --- | --- | --- |
@@ -108,6 +120,8 @@ python .github/pages_build.py --build
 | 소개·활동 글의 내용 | `site/content/` | 직접 작성 | 본인 경험·계획. 문장 다듬기와 페이지 구성에 AI(Claude) 도움을 받음 |
 | 대표 활동 흐름도 `timeline.svg` | `site/content/activities/law-school/` | AI 생성 | 본인이 제공한 활동 내용을 바탕으로 AI(Claude)가 SVG 코드로 작성 |
 | 파비콘 (`favicon.ico` 등 5개) | `site/static/` | AI 생성 | AI(Claude)가 Python Pillow로 생성. 글꼴: Noto Sans CJK (SIL Open Font License) |
+| 자동 점검 스크립트 `check_site.py` | `docs/tools/` | AI 생성 + 본인 확인 | AI(Claude)가 Playwright로 작성, 실행 결과를 `docs/evidence/auto/`에 저장 |
+| 검증 화면 캡처 `fig01`~ | `docs/evidence/` | 직접 제작 | 본인이 Chrome에서 공개 사이트를 캡처 |
 | 사이트 설정·화면 수정 | `site/hugo.toml`, `site/layouts/`, `site/assets/css/extended/` | AI 도움 + 본인 확인 | AI(Claude)가 작성하고 본인이 사이트에서 동작을 확인 |
 
 AI 도움을 받은 커밋에는 커밋 메시지 끝에 `Co-Authored-By: Claude` 표시를 남겼습니다.
