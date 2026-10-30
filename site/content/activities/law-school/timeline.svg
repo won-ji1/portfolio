@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600" role="img" aria-labelledby="t d">
+  <title id="t">로스쿨 진학 준비 과정 흐름도</title>
+  <desc id="d">2025년 9월 시작: 수능 킬러지문 교재 1회독, PSAT 10개년 기출 1회독, LEET 기출 약 5회독, 2026년 7월 말 LEET 응시, 자기소개서 작성, 원서 2곳 제출, 현재 1차 결과 대기 중.</desc>
+  <style>
+    .box { fill: #f4f6f8; stroke: #2f4a6d; stroke-width: 2; }
+    .now { fill: #fff6e0; stroke: #a56a00; stroke-width: 2; stroke-dasharray: 6 4; }
+    .line { stroke: #2f4a6d; stroke-width: 3; }
+    .label { font: 700 19px sans-serif; fill: #1a1a1a; }
+    .sub { font: 16px sans-serif; fill: #3a3a3a; }
+    .tag { font: 700 15px sans-serif; fill: #2f4a6d; }
+  </style>
+  <rect width="480" height="600" fill="#ffffff"/>
+  <line class="line" x1="40" y1="40" x2="40" y2="560"/>
+
+  <circle cx="40" cy="44" r="9" fill="#2f4a6d"/>
+  <text class="tag" x="64" y="30">2025년 9월 시작</text>
+  <rect class="box" x="64" y="38" width="396" height="56" rx="8"/>
+  <text class="label" x="80" y="64">① LEET 공부 — 기초 독해</text>
+  <text class="sub" x="80" y="85">수능 킬러지문 교재 1회독</text>
+
+  <circle cx="40" cy="134" r="9" fill="#2f4a6d"/>
+  <rect class="box" x="64" y="110" width="396" height="56" rx="8"/>
+  <text class="label" x="80" y="136">② PSAT 기출</text>
+  <text class="sub" x="80" y="157">5급 공채 PSAT 10개년 1회독</text>
+
+  <circle cx="40" cy="206" r="9" fill="#2f4a6d"/>
+  <rect class="box" x="64" y="182" width="396" height="56" rx="8"/>
+  <text class="label" x="80" y="208">③ LEET 기출 반복</text>
+  <text class="sub" x="80" y="229">시험 전까지 약 5회독</text>
+
+  <circle cx="40" cy="296" r="9" fill="#2f4a6d"/>
+  <text class="tag" x="64" y="270">2026년 7월 말</text>
+  <rect class="box" x="64" y="278" width="396" height="44" rx="8"/>
+  <text class="label" x="80" y="307">④ LEET 응시 완료</text>
+
+  <circle cx="40" cy="364" r="9" fill="#2f4a6d"/>
+  <rect class="box" x="64" y="340" width="396" height="56" rx="8"/>
+  <text class="label" x="80" y="366">⑤ 자기소개서 작성</text>
+  <text class="sub" x="80" y="387">전체 기억 정리 → 압축 → 장점·결핍 도출</text>
+
+  <circle cx="40" cy="436" r="9" fill="#2f4a6d"/>
+  <rect class="box" x="64" y="414" width="396" height="44" rx="8"/>
+  <text class="label" x="80" y="443">⑥ 원서 2곳 제출 완료</text>
+
+  <circle cx="40" cy="522" r="9" fill="#a56a00"/>
+  <text class="tag" x="64" y="496">현재 (진행 중)</text>
+  <rect class="now" x="64" y="504" width="396" height="56" rx="8"/>
+  <text class="label" x="80" y="530">⑦ 1차 결과 대기</text>
+  <text class="sub" x="80" y="551">다음: 면접 준비 · 민법 선행학습</text>
+</svg>
