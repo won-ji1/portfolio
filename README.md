@@ -51,3 +51,38 @@ python .github/pages_build.py --build
 ```
 
 결과는 `public/` 폴더에 생성되며 `public/index.html`이 홈 페이지입니다. (`public/`은 Git에 올리지 않습니다.)
+
+## 4. 수정할 파일 위치
+
+| 바꾸고 싶은 것 | 파일 |
+| --- | --- |
+| 사이트 제목, 언어, 메뉴, 홈 첫 화면 소개, GitHub 링크 | `site/hugo.toml` |
+| 소개 페이지 (관심 분야·학습 목표·역량) | `site/content/about.md` |
+| 활동 목록 문구 | `site/content/activities/_index.md` |
+| 대표 활동 (로스쿨 진학 준비) | `site/content/activities/law-school/index.md` |
+| 대표 활동 흐름도 이미지 | `site/content/activities/law-school/timeline.svg` |
+| 보조 활동 (포트폴리오 사이트 제작) | `site/content/activities/portfolio-site.md` |
+| 파비콘 | `site/static/` |
+| 테마 화면 일부 수정 (원본 대신 이 폴더 파일이 우선) | `site/layouts/`, `site/assets/css/extended/` |
+| 배포용 설정 (baseURL, 테마 지정) — 직접 수정하지 않음 | `site/pages.json`, `.github-pages.json` |
+| 배포 워크플로 | `.github/workflows/hugo-pages.yml` |
+
+배포 빌드는 `.github-pages.json`의 `"config": "hugo.toml,pages.json"` 순서로 설정을 읽습니다. 뒤에 오는 `pages.json`이 baseURL·테마 같은 배포 값을 덮어씁니다.
+
+저장소 최상위의 `assets/`, `layouts/`, `i18n/`, `images/`, `theme.toml`, `go.mod`는 내려받은 테마 원본입니다. 실제 빌드에는 `site/themes/template/`에 복사된 테마가 쓰입니다.
+
+## 5. 수정 후 재배포와 확인 방법
+
+1. 위 파일을 수정하고 로컬 미리보기로 확인합니다.
+2. 커밋하고 `main`에 push합니다.
+
+   ```bash
+   git add .
+   git commit -m "수정 내용을 설명하는 메시지"
+   git push origin main
+   ```
+
+3. **Actions 확인:** <https://github.com/won-ji1/portfolio/actions> 에서 방금 커밋 메시지로 시작된 `Deploy Hugo to GitHub Pages` 실행을 엽니다. `build`와 `deploy` 두 작업이 모두 초록색 체크(✓)면 성공입니다.
+4. **공개 화면 확인:** <https://won-ji1.github.io/portfolio/> 를 새로고침해 변경 내용이 보이는지 확인합니다. 캐시 때문에 이전 화면이 보이면 `Ctrl + Shift + R`(Mac: `Cmd + Shift + R`)로 강력 새로고침합니다.
+
+처음 한 번은 GitHub 저장소의 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 설정해야 합니다. 설정 전 첫 실행이 실패했다면 설정 후 Actions 화면에서 **Re-run jobs**를 누릅니다.
