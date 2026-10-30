@@ -1,8 +1,9 @@
 """포트폴리오 사이트 자동 점검 스크립트 (Playwright + Chromium)
 
-점검 항목: 1440/768/390px 가로 넘침, 깨진 요청·이미지, alt 누락, CSS 로딩, 메뉴 표시·터치 폭,
+점검 항목: 1440/768/390/360px 가로 넘침, 깨진 요청·이미지, alt 누락, CSS 로딩, 메뉴 표시·터치 폭,
 앵커 대상 존재, 내부 링크 200 응답, 폭 변경 후 메뉴 유지, Tab 순서·초점 표시, Enter 이동·뒤로 가기,
-200% 확대(720px), 본문 바로가기, 404 페이지.
+200% 확대(720px), 본문 바로가기, 404 페이지,
+'맨 위로' 버튼 겹침(모든 페이지·폭, 창 높이 900/420px에서 스크롤), 테마 버튼 Enter 전환, 앵커 주소 새로고침.
 
 사용법 (저장소 최상위 폴더):
   pip install playwright && python -m playwright install chromium
@@ -50,7 +51,7 @@ with sync_playwright() as p:
         def close(self): _br.close()
     br = B()
     report['browser'] = f'Chromium {br.version}'
-    for width in (1440, 768, 390):
+    for width in (1440, 768, 390, 360):
         ctx = br.new_context(viewport={'width': width, 'height': 900})
         page = ctx.new_page()
         failed = []
@@ -170,6 +171,39 @@ with sync_playwright() as p:
         sw = z.evaluate('() => document.documentElement.scrollWidth')
         if sw > 721: issue(f'zoom200 {path} overflow {sw}')
     z.screenshot(path=str(OUT / 'zoom200_home.png'))
+
+    # '맨 위로' 버튼 겹침: 모든 페이지·폭에서 스크롤하며 버튼이 보이는 동안 링크·이미지와 겹치는지 측정
+    overlap = []
+    for width in (1440, 900, 768, 390, 360):
+        for height in (900, 420):
+            oc = br.new_context(viewport={'width': width, 'height': height}); op = oc.new_page()
+            for path in PAGES:
+                op.goto(BASE + path, wait_until='networkidle')
+                H = op.evaluate('document.documentElement.scrollHeight')
+                for y in list(range(0, H, 100)) + [H]:
+                    op.evaluate(f'window.scrollTo(0,{y})'); op.wait_for_timeout(20)
+                    hits = op.evaluate("""() => { const t = document.getElementById('top-link'); if (!t) return [];
+                      const s = getComputedStyle(t); if (s.visibility === 'hidden' || s.opacity === '0') return [];
+                      const tr = t.getBoundingClientRect();
+                      return [...document.querySelectorAll('main a, main img, footer a, #menu a')].filter(e => { const r = e.getBoundingClientRect();
+                        return r.width && !(r.right <= tr.left || r.left >= tr.right || r.bottom <= tr.top || r.top >= tr.bottom) })
+                        .map(e => e.tagName + ':' + (e.textContent || e.alt || '').trim().slice(0, 15)) }""")
+                    if hits: overlap.append(f'{width}x{height} {path or "home"} y={y} {hits}')
+            oc.close()
+    report['toplink_overlaps'] = overlap
+    if overlap: issue(f'top-link overlaps: {overlap[:5]}')
+    # 테마 버튼 키보드 전환, 앵커 주소 새로고침 유지
+    tc = br.new_context(viewport={'width': 1440, 'height': 900}); tp = tc.new_page()
+    tp.goto(BASE + 'about/', wait_until='networkidle')
+    before = tp.evaluate('document.documentElement.dataset.theme')
+    tp.focus('#theme-toggle'); tp.keyboard.press('Enter')
+    after = tp.evaluate('document.documentElement.dataset.theme')
+    report['theme_toggle_enter'] = [before, after]
+    if before == after: issue('theme toggle did not change on Enter')
+    tp.goto(BASE + 'about/#goals', wait_until='networkidle'); tp.reload(wait_until='networkidle')
+    report['anchor_reload'] = tp.evaluate("""() => [location.href, !!document.getElementById('goals'), Math.round(document.getElementById('goals').getBoundingClientRect().top)]""")
+    if not report['anchor_reload'][1]: issue('anchor target missing after reload')
+    tc.close()
     # Skip link and 404
     q = br.new_context(viewport={'width': 390, 'height': 844}).new_page()
     q.goto(BASE + 'activities/law-school/', wait_until='networkidle')
@@ -185,6 +219,7 @@ with sync_playwright() as p:
 
 (OUT / 'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=1))
 print('browser:', report['browser'], '| links checked:', report['internal_links_checked'], '| issues:', len(report['issues']))
+print('toplink overlaps:', len(report['toplink_overlaps']), '| theme Enter:', report['theme_toggle_enter'], '| anchor reload:', report['anchor_reload'])
 print('first_tab:', report['first_tab'], 'after_skip:', report['after_skip'], '404:', report['404'])
 print('enter_nav:', report['enter_nav'], 'back:', report['back_nav'])
 for t in report['tab_order']: print('TAB', t)
