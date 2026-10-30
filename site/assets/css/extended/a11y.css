@@ -13,3 +13,22 @@ summary:focus-visible {
     min-width: 44px;
     text-align: center;
 }
+
+/* 본문 바로가기: 평소에는 화면 밖에 두고, Tab으로 초점이 오면 왼쪽 위에 표시 */
+.skip-link {
+    position: absolute;
+    left: 8px;
+    top: -60px;
+    z-index: 100;
+    padding: 8px 14px;
+    background: var(--theme);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+}
+.skip-link:focus {
+    top: 8px;
+}
+#main-content:focus {
+    outline: none;
+}
