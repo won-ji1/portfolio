@@ -1,0 +1,8 @@
+# 한지원 포트폴리오 사이트 운영 설정
+# 배포 빌드는 .github-pages.json 의 "config": "hugo.toml,pages.json" 순서로 읽습니다.
+# (뒤에 오는 pages.json 이 baseURL·theme 등 배포용 값을 덮어씁니다.)
+
+baseURL = "https://won-ji1.github.io/portfolio/"
+title = "한지원"
+languageCode = "ko-KR"
+defaultContentLanguage = "ko"
