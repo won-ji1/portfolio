@@ -63,11 +63,21 @@ python .github/pages_build.py --build
 | 대표 활동 흐름도 이미지 | `site/content/activities/law-school/timeline.svg` |
 | 보조 활동 (포트폴리오 사이트 제작) | `site/content/activities/portfolio-site.md` |
 | 파비콘 | `site/static/` |
-| 테마 화면 일부 수정 (원본 대신 이 폴더 파일이 우선) | `site/layouts/`, `site/assets/css/extended/` |
+| 한국어 줄바꿈·요약 표시 CSS | `site/assets/css/extended/korean.css` |
+| 키보드 초점·터치 영역·본문 바로가기 CSS | `site/assets/css/extended/a11y.css` |
+| 본문 바로가기 링크, 테마 버튼 이름 | `site/layouts/_partials/header.html` (테마 원본 복사 후 수정) |
+| 하단 소스 링크, '맨 위로' 버튼 이름 | `site/layouts/_partials/footer.html` (〃) |
+| GitHub 아이콘 링크 이름 | `site/layouts/_partials/social_icons.html` (〃) |
+| 활동 카드 링크 이름 / 이동 경로 이름 | `site/layouts/list.html`, `site/layouts/_partials/breadcrumbs.html` (〃) |
+| 본문 영역 id (`main-content`) | `site/layouts/baseof.html` (〃) |
+| 404 페이지 | `site/layouts/404.html` |
+| 검증 캡처·기록 | `docs/evidence/` |
 | 배포용 설정 (baseURL, 테마 지정) — 직접 수정하지 않음 | `site/pages.json`, `.github-pages.json` |
 | 배포 워크플로 | `.github/workflows/hugo-pages.yml` |
 
 배포 빌드는 `.github-pages.json`의 `"config": "hugo.toml,pages.json"` 순서로 설정을 읽습니다. 뒤에 오는 `pages.json`이 baseURL·테마 같은 배포 값을 덮어씁니다.
+
+`site/layouts/`의 파일은 같은 경로의 테마 원본(`site/themes/template/layouts/`)보다 우선 적용됩니다. 테마 원본 파일은 수정하지 않았습니다.
 
 저장소 최상위의 `assets/`, `layouts/`, `i18n/`, `images/`, `theme.toml`, `go.mod`는 내려받은 테마 원본입니다. 실제 빌드에는 `site/themes/template/`에 복사된 테마가 쓰입니다.
 
