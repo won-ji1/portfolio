@@ -1,5 +1,5 @@
 {
-  "config": "pages.json",
+  "config": "hugo.toml,pages.json",
   "theme": "template",
   "sample": null,
   "version": "0.167.0",
