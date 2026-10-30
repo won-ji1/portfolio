@@ -1,0 +1,15 @@
+{{- define "main" }}
+<article class="first-entry not-found-page">
+  <header class="entry-header">
+    <h1>페이지를 찾을 수 없습니다 (404)</h1>
+  </header>
+  <div class="entry-content md-content">
+    <p>주소가 바뀌었거나 잘못 입력되었을 수 있습니다. 아래 링크로 이동해 주세요.</p>
+    <ul>
+      <li><a href="{{ "" | relURL }}">홈으로 돌아가기</a></li>
+      <li><a href="{{ "about/" | relURL }}">소개</a></li>
+      <li><a href="{{ "activities/" | relURL }}">활동</a></li>
+    </ul>
+  </div>
+</article>
+{{- end }}{{/* end main */ -}}
