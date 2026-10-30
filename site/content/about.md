@@ -34,6 +34,6 @@ TocOpen: true
 | 기술·역량 | 실제 사용 사례 |
 | --- | --- |
 | **기출 반복 학습(회독)** | LEET 준비에서 수능 킬러지문 교재 1회독, 5급 공채 PSAT 10개년 기출 1회독 후 LEET 기출을 시험 전까지 약 5회독했습니다. → [대표 활동](../activities/law-school/#process) |
-| **Git** | 이 사이트의 설정·글 작성·수정 과정을 단계별 커밋으로 기록했습니다. → [커밋 이력](https://github.com/won-ji1/portfolio/commits/main/) |
-| **GitHub Actions · GitHub Pages** | `main` 브랜치에 push하면 사이트가 자동으로 빌드·배포되도록 구성했습니다. → [Actions 실행 기록](https://github.com/won-ji1/portfolio/actions) |
-| **Hugo (PaperMod 테마)** | 마크다운으로 소개·활동 페이지를 작성하고 메뉴·목차를 설정했습니다. → [사이트 소스](https://github.com/won-ji1/portfolio/tree/main/site) |
+| **Git** | 이 사이트의 설정·글 작성·수정 과정을 AI(Claude Code)의 도움을 받아 단계별 커밋으로 기록했고, 저장소 생성과 원격 연결(`git remote add`)·`git pull`·`git push`는 Git Bash에서 직접 했습니다. → [커밋 이력](https://github.com/won-ji1/portfolio/commits/main/) |
+| **GitHub Actions · GitHub Pages** | 수업 스크립트가 만든 자동 배포 구성(`main` push → 빌드·배포)을 사용했고, Pages Source 설정, 실패한 첫 실행 재실행, 매 push 후 성공 여부 확인을 직접 했습니다. → [Actions 실행 기록](https://github.com/won-ji1/portfolio/actions) |
+| **Hugo (PaperMod 테마)** | 소개·활동 내용을 직접 제공·검토하고, AI 도움을 받아 마크다운 페이지와 메뉴·목차 설정으로 만들었습니다. → [사이트 소스](https://github.com/won-ji1/portfolio/tree/main/site) |
