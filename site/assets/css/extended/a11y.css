@@ -6,3 +6,10 @@ summary:focus-visible {
     outline-offset: 3px;
     border-radius: 4px;
 }
+
+/* 모바일 메뉴 터치 영역: '소개'·'활동' 링크 폭이 32px로 좁아 이웃 항목과 구분해 누르기 어려움 → 최소 44px 확보 */
+#menu a {
+    display: inline-block;
+    min-width: 44px;
+    text-align: center;
+}
