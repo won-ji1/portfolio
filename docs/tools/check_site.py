@@ -3,7 +3,8 @@
 점검 항목: 1440/768/390/360px 가로 넘침, 깨진 요청·이미지, alt 누락, CSS 로딩, 메뉴 표시·터치 폭,
 앵커 대상 존재, 내부 링크 200 응답, 폭 변경 후 메뉴 유지, Tab 순서·초점 표시, Enter 이동·뒤로 가기,
 200% 확대(720px), 본문 바로가기, 404 페이지,
-'맨 위로' 버튼 겹침(모든 페이지·폭, 창 높이 900/420px에서 스크롤), 테마 버튼 Enter 전환, 앵커 주소 새로고침.
+'맨 위로' 버튼 겹침(모든 페이지·폭, 창 높이 900/420px에서 스크롤), 테마 버튼 Enter 전환, 앵커 주소 새로고침,
+잘린 내용(overflow 숨김으로 링크·글이 가려짐, 404 포함), HTML의 localhost·127.0.0.1·file:·http: 참조, 파비콘 응답.
 
 사용법 (저장소 최상위 폴더):
   pip install playwright && python -m playwright install chromium
@@ -20,7 +21,7 @@ from playwright.sync_api import sync_playwright
 
 BASE = sys.argv[1].rstrip('/') + '/'
 OUT = Path(sys.argv[2]); OUT.mkdir(parents=True, exist_ok=True)
-PAGES = ['', 'about/', 'activities/', 'activities/law-school/', 'activities/portfolio-site/']
+PAGES = ['', 'about/', 'activities/', 'activities/law-school/', 'activities/portfolio-site/', 'no-such-page/deep/']
 report = {'pages': {}, 'issues': []}
 
 def issue(msg):
@@ -55,10 +56,10 @@ with sync_playwright() as p:
         ctx = br.new_context(viewport={'width': width, 'height': 900})
         page = ctx.new_page()
         failed = []
-        page.on('response', lambda r: failed.append(f'{r.status} {r.url}') if r.status >= 400 else None)
+        page.on('response', lambda r: failed.append(f'{r.status} {r.url}') if r.status >= 400 and 'no-such-page' not in r.url else None)  # 없는 주소의 404 응답은 의도된 결과
         page.on('requestfailed', lambda r: failed.append(f'FAILED {r.url}'))
         errors = []
-        page.on('console', lambda m: errors.append(m.text) if m.type == 'error' else None)
+        page.on('console', lambda m: errors.append(m.text) if m.type == 'error' and 'no-such-page' not in (m.location or {}).get('url', '') and 'status of 404' not in m.text else None)
         for path in PAGES:
             url = BASE + path
             page.goto(url, wait_until='networkidle')
@@ -81,6 +82,15 @@ with sync_playwright() as p:
               const hs = [...document.querySelectorAll('h1,h2,h3')].map(h => h.tagName + ':' + h.textContent.trim().slice(0, 30));
               return {scrollW: de.scrollWidth, innerW: innerWidth, over: over.slice(0, 5), imgs, css, menu, anchors, hs, lang: de.lang, title: document.title};
             }''')
+            clipped = page.evaluate("""() => [...document.querySelectorAll('main a, main p, main li, main h1, main h2, main td')].filter(e => {
+                let p = e; while (p && p !== document.body) { const s = getComputedStyle(p);
+                  if ((s.overflow === 'hidden' || s.overflowY === 'hidden') && (p.scrollHeight > p.clientHeight + 2) && !p.matches('pre, code, .highlight')) {
+                    const r = e.getBoundingClientRect(), pr = p.getBoundingClientRect(); if (r.bottom > pr.bottom + 1 || r.height === 0) return true; }
+                  p = p.parentElement; } return false; }).map(e => e.tagName + ':' + e.textContent.trim().slice(0, 20))""")
+            if clipped: issue(f'{width}:{path or "home"} clipped content {clipped[:5]}')
+            html = page.content()
+            local_refs = re.findall(r'(?:src|href)=["\']?((?:https?://(?:localhost|127\.0\.0\.1)|file:|http://)[^"\' >]*)', html)
+            if local_refs: issue(f'{width}:{path or "home"} local/http refs {local_refs[:5]}')
             key = f'{width}:{path or "home"}'
             report['pages'][key] = info
             if info['scrollW'] > info['innerW'] + 1:
@@ -125,7 +135,8 @@ with sync_playwright() as p:
             if (base_url, frag) in seen: continue
             seen.add((base_url, frag))
             r = page.goto(base_url, wait_until='domcontentloaded')
-            if not r or r.status != 200:
+            same_page = base_url.rstrip('/') == src.split('#')[0].rstrip('/')
+            if not r or (r.status != 200 and not same_page):  # 같은 페이지 앵커(#top 등)는 그 페이지 상태와 무관
                 issue(f'link {h} from {src} -> {r.status if r else None}'); continue
             if frag and not page.evaluate('id => !!document.getElementById(decodeURIComponent(id))', frag):
                 issue(f'link {h} from {src}: missing #{frag}')
@@ -170,6 +181,7 @@ with sync_playwright() as p:
         z.goto(BASE + path, wait_until='networkidle')
         sw = z.evaluate('() => document.documentElement.scrollWidth')
         if sw > 721: issue(f'zoom200 {path} overflow {sw}')
+    z.goto(BASE, wait_until='networkidle')
     z.screenshot(path=str(OUT / 'zoom200_home.png'))
 
     # '맨 위로' 버튼 겹침: 모든 페이지·폭에서 스크롤하며 버튼이 보이는 동안 링크·이미지와 겹치는지 측정
@@ -204,6 +216,15 @@ with sync_playwright() as p:
     report['anchor_reload'] = tp.evaluate("""() => [location.href, !!document.getElementById('goals'), Math.round(document.getElementById('goals').getBoundingClientRect().top)]""")
     if not report['anchor_reload'][1]: issue('anchor target missing after reload')
     tc.close()
+    fv = br.new_context().new_page(); fv.goto(BASE, wait_until='networkidle'); fav = {}
+    for f in ('favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png', 'safari-pinned-tab.svg'):
+        try:
+            fav[f] = fv.evaluate('u => fetch(u).then(r => r.status)', BASE + f)
+        except Exception:  # Chromium은 페이지 안 fetch로 favicon.ico를 요청하지 않음 → 파일(로컬) 또는 HTTP 요청(공개)으로 확인
+            fav[f] = (200 if (PUBLIC / f).is_file() else 404) if PUBLIC else fv.request.get(BASE + f).status
+    report['favicons'] = fav
+    if any(v != 200 for v in fav.values()): issue(f'favicon status {fav}')
+    report['checked_for'] = ['overflow', 'failed_requests', 'console_errors', 'images_alt_ratio', 'css', 'menu_touch', 'anchors', 'internal_links', 'resize', 'tab_focus', 'enter_back', 'zoom200', 'toplink_overlap', 'theme_enter', 'anchor_reload', 'clipped_content', 'local_http_refs', 'favicons', 'skip_link', '404']
     # Skip link and 404
     q = br.new_context(viewport={'width': 390, 'height': 844}).new_page()
     q.goto(BASE + 'activities/law-school/', wait_until='networkidle')
