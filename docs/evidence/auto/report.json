@@ -1,0 +1,1181 @@
+{
+ "pages": {
+  "1440:home": {
+   "scrollW": 1440,
+   "innerW": 1440,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1023,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1091,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 1159,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "about/",
+    "activities/",
+    "https://github.com/won-ji1",
+    "https://won-ji1.github.io/portfolio/activities/law-school/",
+    "https://won-ji1.github.io/portfolio/activities/portfolio-site/",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:안녕하세요, 한지원입니다",
+    "H2:[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서",
+    "H2:포트폴리오 사이트 제작 (초급프로젝트 과제 1)"
+   ],
+   "lang": "ko",
+   "title": "한지원"
+  },
+  "1440:about/": {
+   "scrollW": 1440,
+   "innerW": 1440,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1023,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1091,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 1159,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "#intro",
+    "#interest",
+    "#goals",
+    "#skills",
+    "#intro",
+    "https://github.com/won-ji1",
+    "../activities/law-school/",
+    "#interest",
+    "../activities/portfolio-site/",
+    "#goals",
+    "../activities/law-school/#lessons",
+    "#skills",
+    "../activities/law-school/#process",
+    "https://github.com/won-ji1/portfolio/commits/main/",
+    "https://github.com/won-ji1/portfolio/actions",
+    "https://github.com/won-ji1/portfolio/tree/main/site",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:소개",
+    "H2:한지원은#",
+    "H2:관심 분야와 선택 이유#",
+    "H2:학습 목표와 실행 계획#",
+    "H2:역량과 적용 사례#"
+   ],
+   "lang": "ko",
+   "title": "소개 | 한지원"
+  },
+  "1440:activities/": {
+   "scrollW": 1440,
+   "innerW": 1440,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1023,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1091,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 1159,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "https://won-ji1.github.io/portfolio/activities/law-school/",
+    "https://won-ji1.github.io/portfolio/activities/portfolio-site/",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:활동",
+    "H2:[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서",
+    "H2:포트폴리오 사이트 제작 (초급프로젝트 과제 1)"
+   ],
+   "lang": "ko",
+   "title": "활동 | 한지원"
+  },
+  "1440:activities/law-school/": {
+   "scrollW": 1440,
+   "innerW": 1440,
+   "over": [],
+   "imgs": [
+    {
+     "src": "https://won-ji1.github.io/portfolio/activities/law-school/timeline.svg",
+     "ok": true,
+     "alt": "로스쿨 진학 준비 과정 흐름도: 2025년 9월부터 수능 킬러지문 1회독, PSAT 10개년 1회독, LEET 기출 약 5회독을 거쳐 2026년 7월 말 LEET에 응시했고, 자기소개서 작성과 원서 2곳 제출을 마친 뒤 현재 1차 결과를 기다리는 중",
+     "w": 480,
+     "ratio": 1
+    }
+   ],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1023,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1091,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 1159,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "/portfolio/activities/",
+    "#overview",
+    "#purpose",
+    "#role",
+    "#process",
+    "#process-leet",
+    "#process-essay",
+    "#process-apply",
+    "#results",
+    "#lessons",
+    "#next",
+    "#overview",
+    "#purpose",
+    "#role",
+    "#process",
+    "timeline.svg",
+    "timeline.svg",
+    "#process-leet",
+    "#process-essay",
+    "#process-apply",
+    "#results",
+    "#lessons",
+    "#next",
+    "../../about/#goals",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서",
+    "H2:활동 개요#",
+    "H2:목적#",
+    "H2:본인 역할#",
+    "H2:수행 과정과 선택 이유#",
+    "H3:1. LEET 준비 (2025년 9월 ~ 2026년 7",
+    "H3:2. 자기소개서 작성#",
+    "H3:3. 원서 제출#",
+    "H2:결과와 산출물#",
+    "H2:배운 점과 한계#",
+    "H2:다음 개선 방향#"
+   ],
+   "lang": "ko",
+   "title": "[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서·원서 | 한지원"
+  },
+  "1440:activities/portfolio-site/": {
+   "scrollW": 1440,
+   "innerW": 1440,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1023,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1091,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 1159,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "/portfolio/activities/",
+    "#overview",
+    "#process",
+    "#results",
+    "#lessons",
+    "#overview",
+    "#process",
+    "#results",
+    "https://github.com/won-ji1/portfolio",
+    "https://github.com/won-ji1/portfolio/commits/main/",
+    "https://github.com/won-ji1/portfolio/actions",
+    "#lessons",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:포트폴리오 사이트 제작 (초급프로젝트 과제 1)",
+    "H2:활동 개요#",
+    "H2:수행 과정#",
+    "H2:결과물#",
+    "H2:배운 점#"
+   ],
+   "lang": "ko",
+   "title": "포트폴리오 사이트 제작 (초급프로젝트 과제 1) | 한지원"
+  },
+  "768:home": {
+   "scrollW": 768,
+   "innerW": 768,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 565,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 623,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 681,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "about/",
+    "activities/",
+    "https://github.com/won-ji1",
+    "https://won-ji1.github.io/portfolio/activities/law-school/",
+    "https://won-ji1.github.io/portfolio/activities/portfolio-site/",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:안녕하세요, 한지원입니다",
+    "H2:[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서",
+    "H2:포트폴리오 사이트 제작 (초급프로젝트 과제 1)"
+   ],
+   "lang": "ko",
+   "title": "한지원"
+  },
+  "768:about/": {
+   "scrollW": 768,
+   "innerW": 768,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 565,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 623,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 681,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "#intro",
+    "#interest",
+    "#goals",
+    "#skills",
+    "#intro",
+    "https://github.com/won-ji1",
+    "../activities/law-school/",
+    "#interest",
+    "../activities/portfolio-site/",
+    "#goals",
+    "../activities/law-school/#lessons",
+    "#skills",
+    "../activities/law-school/#process",
+    "https://github.com/won-ji1/portfolio/commits/main/",
+    "https://github.com/won-ji1/portfolio/actions",
+    "https://github.com/won-ji1/portfolio/tree/main/site",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:소개",
+    "H2:한지원은#",
+    "H2:관심 분야와 선택 이유#",
+    "H2:학습 목표와 실행 계획#",
+    "H2:역량과 적용 사례#"
+   ],
+   "lang": "ko",
+   "title": "소개 | 한지원"
+  },
+  "768:activities/": {
+   "scrollW": 768,
+   "innerW": 768,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 565,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 623,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 681,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "https://won-ji1.github.io/portfolio/activities/law-school/",
+    "https://won-ji1.github.io/portfolio/activities/portfolio-site/",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:활동",
+    "H2:[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서",
+    "H2:포트폴리오 사이트 제작 (초급프로젝트 과제 1)"
+   ],
+   "lang": "ko",
+   "title": "활동 | 한지원"
+  },
+  "768:activities/law-school/": {
+   "scrollW": 768,
+   "innerW": 768,
+   "over": [],
+   "imgs": [
+    {
+     "src": "https://won-ji1.github.io/portfolio/activities/law-school/timeline.svg",
+     "ok": true,
+     "alt": "로스쿨 진학 준비 과정 흐름도: 2025년 9월부터 수능 킬러지문 1회독, PSAT 10개년 1회독, LEET 기출 약 5회독을 거쳐 2026년 7월 말 LEET에 응시했고, 자기소개서 작성과 원서 2곳 제출을 마친 뒤 현재 1차 결과를 기다리는 중",
+     "w": 480,
+     "ratio": 1
+    }
+   ],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 565,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 623,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 681,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "/portfolio/activities/",
+    "#overview",
+    "#purpose",
+    "#role",
+    "#process",
+    "#process-leet",
+    "#process-essay",
+    "#process-apply",
+    "#results",
+    "#lessons",
+    "#next",
+    "#overview",
+    "#purpose",
+    "#role",
+    "#process",
+    "timeline.svg",
+    "timeline.svg",
+    "#process-leet",
+    "#process-essay",
+    "#process-apply",
+    "#results",
+    "#lessons",
+    "#next",
+    "../../about/#goals",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서",
+    "H2:활동 개요#",
+    "H2:목적#",
+    "H2:본인 역할#",
+    "H2:수행 과정과 선택 이유#",
+    "H3:1. LEET 준비 (2025년 9월 ~ 2026년 7",
+    "H3:2. 자기소개서 작성#",
+    "H3:3. 원서 제출#",
+    "H2:결과와 산출물#",
+    "H2:배운 점과 한계#",
+    "H2:다음 개선 방향#"
+   ],
+   "lang": "ko",
+   "title": "[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서·원서 | 한지원"
+  },
+  "768:activities/portfolio-site/": {
+   "scrollW": 768,
+   "innerW": 768,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 565,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 623,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 681,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "/portfolio/activities/",
+    "#overview",
+    "#process",
+    "#results",
+    "#lessons",
+    "#overview",
+    "#process",
+    "#results",
+    "https://github.com/won-ji1/portfolio",
+    "https://github.com/won-ji1/portfolio/commits/main/",
+    "https://github.com/won-ji1/portfolio/actions",
+    "#lessons",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:포트폴리오 사이트 제작 (초급프로젝트 과제 1)",
+    "H2:활동 개요#",
+    "H2:수행 과정#",
+    "H2:결과물#",
+    "H2:배운 점#"
+   ],
+   "lang": "ko",
+   "title": "포트폴리오 사이트 제작 (초급프로젝트 과제 1) | 한지원"
+  },
+  "390:home": {
+   "scrollW": 390,
+   "innerW": 390,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 187,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 245,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 303,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "about/",
+    "activities/",
+    "https://github.com/won-ji1",
+    "https://won-ji1.github.io/portfolio/activities/law-school/",
+    "https://won-ji1.github.io/portfolio/activities/portfolio-site/",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:안녕하세요, 한지원입니다",
+    "H2:[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서",
+    "H2:포트폴리오 사이트 제작 (초급프로젝트 과제 1)"
+   ],
+   "lang": "ko",
+   "title": "한지원"
+  },
+  "390:about/": {
+   "scrollW": 390,
+   "innerW": 390,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 187,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 245,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 303,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "#intro",
+    "#interest",
+    "#goals",
+    "#skills",
+    "#intro",
+    "https://github.com/won-ji1",
+    "../activities/law-school/",
+    "#interest",
+    "../activities/portfolio-site/",
+    "#goals",
+    "../activities/law-school/#lessons",
+    "#skills",
+    "../activities/law-school/#process",
+    "https://github.com/won-ji1/portfolio/commits/main/",
+    "https://github.com/won-ji1/portfolio/actions",
+    "https://github.com/won-ji1/portfolio/tree/main/site",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:소개",
+    "H2:한지원은#",
+    "H2:관심 분야와 선택 이유#",
+    "H2:학습 목표와 실행 계획#",
+    "H2:역량과 적용 사례#"
+   ],
+   "lang": "ko",
+   "title": "소개 | 한지원"
+  },
+  "390:activities/": {
+   "scrollW": 390,
+   "innerW": 390,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 187,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 245,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 303,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "https://won-ji1.github.io/portfolio/activities/law-school/",
+    "https://won-ji1.github.io/portfolio/activities/portfolio-site/",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:활동",
+    "H2:[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서",
+    "H2:포트폴리오 사이트 제작 (초급프로젝트 과제 1)"
+   ],
+   "lang": "ko",
+   "title": "활동 | 한지원"
+  },
+  "390:activities/law-school/": {
+   "scrollW": 390,
+   "innerW": 390,
+   "over": [],
+   "imgs": [
+    {
+     "src": "https://won-ji1.github.io/portfolio/activities/law-school/timeline.svg",
+     "ok": true,
+     "alt": "로스쿨 진학 준비 과정 흐름도: 2025년 9월부터 수능 킬러지문 1회독, PSAT 10개년 1회독, LEET 기출 약 5회독을 거쳐 2026년 7월 말 LEET에 응시했고, 자기소개서 작성과 원서 2곳 제출을 마친 뒤 현재 1차 결과를 기다리는 중",
+     "w": 362,
+     "ratio": 1
+    }
+   ],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 187,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 245,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 303,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "/portfolio/activities/",
+    "#overview",
+    "#purpose",
+    "#role",
+    "#process",
+    "#process-leet",
+    "#process-essay",
+    "#process-apply",
+    "#results",
+    "#lessons",
+    "#next",
+    "#overview",
+    "#purpose",
+    "#role",
+    "#process",
+    "timeline.svg",
+    "timeline.svg",
+    "#process-leet",
+    "#process-essay",
+    "#process-apply",
+    "#results",
+    "#lessons",
+    "#next",
+    "../../about/#goals",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서",
+    "H2:활동 개요#",
+    "H2:목적#",
+    "H2:본인 역할#",
+    "H2:수행 과정과 선택 이유#",
+    "H3:1. LEET 준비 (2025년 9월 ~ 2026년 7",
+    "H3:2. 자기소개서 작성#",
+    "H3:3. 원서 제출#",
+    "H2:결과와 산출물#",
+    "H2:배운 점과 한계#",
+    "H2:다음 개선 방향#"
+   ],
+   "lang": "ko",
+   "title": "[대표 활동] 로스쿨 진학 준비 — LEET·자기소개서·원서 | 한지원"
+  },
+  "390:activities/portfolio-site/": {
+   "scrollW": 390,
+   "innerW": 390,
+   "over": [],
+   "imgs": [],
+   "css": [
+    275
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 187,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 245,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 303,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "/portfolio/activities/",
+    "#overview",
+    "#process",
+    "#results",
+    "#lessons",
+    "#overview",
+    "#process",
+    "#results",
+    "https://github.com/won-ji1/portfolio",
+    "https://github.com/won-ji1/portfolio/commits/main/",
+    "https://github.com/won-ji1/portfolio/actions",
+    "#lessons",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:포트폴리오 사이트 제작 (초급프로젝트 과제 1)",
+    "H2:활동 개요#",
+    "H2:수행 과정#",
+    "H2:결과물#",
+    "H2:배운 점#"
+   ],
+   "lang": "ko",
+   "title": "포트폴리오 사이트 제작 (초급프로젝트 과제 1) | 한지원"
+  }
+ },
+ "issues": [],
+ "browser": "Chromium 153.0.8010.12",
+ "internal_links_checked": 34,
+ "resize_ok": true,
+ "tab_order": [
+  {
+   "tag": "A",
+   "text": "본문 바로가기",
+   "href": "#main-content",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "한지원",
+   "href": "https://won-ji1.github.io/portfolio/",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "BUTTON",
+   "text": "밝은 테마와 어두운 테마 전환",
+   "href": null,
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "소개",
+   "href": "https://won-ji1.github.io/portfolio/about/",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "활동",
+   "href": "https://won-ji1.github.io/portfolio/activities/",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "GitHub",
+   "href": "https://github.com/won-ji1",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "홈",
+   "href": "/portfolio/",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "SUMMARY",
+   "text": "목차",
+   "href": null,
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "한지원은",
+   "href": "#intro",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "관심 분야와 선택 이유",
+   "href": "#interest",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "학습 목표와 실행 계획",
+   "href": "#goals",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "역량과 적용 사례",
+   "href": "#skills",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "won-ji1",
+   "href": "https://github.com/won-ji1",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  },
+  {
+   "tag": "A",
+   "text": "대표 활동: 로스쿨 진학 준비",
+   "href": "../activities/law-school/",
+   "outline": "solid 3px",
+   "shadow": "none",
+   "visible": true
+  }
+ ],
+ "enter_nav": "https://won-ji1.github.io/portfolio/about/",
+ "back_nav": "https://won-ji1.github.io/portfolio/",
+ "first_tab": [
+  "본문 바로가기",
+  8
+ ],
+ "after_skip": [
+  "main-content",
+  "#main-content"
+ ],
+ "404": [
+  404,
+  "페이지를 찾을 수 없습니다 (404)",
+  1
+ ]
+}
