@@ -39,8 +39,10 @@ GitHub Actions에서는 워크플로가 Hugo 0.167.0, Dart Sass, Node, Go를 직
 
 ```bash
 cd site
-hugo server --config hugo.toml,pages.json
+hugo server --config "hugo.toml,pages.json"
 ```
+
+`hugo.toml,pages.json`은 반드시 **따옴표로 감싸 한 덩어리**로 입력합니다. Git Bash·macOS 터미널·명령 프롬프트(cmd)·PowerShell에서 모두 같은 명령으로 동작합니다. (PowerShell에서는 따옴표 없이 쓰면 쉼표에서 인수가 나뉘어 `unknown command "pages.json"` 오류가 납니다.)
 
 브라우저에서 <http://localhost:1313/portfolio/> 를 엽니다. 종료는 `Ctrl + C`.
 
@@ -49,6 +51,8 @@ hugo server --config hugo.toml,pages.json
 ```bash
 python .github/pages_build.py --build
 ```
+
+macOS·Linux에서 `python` 명령이 없으면 `python3`으로 바꿔 입력합니다.
 
 결과는 `public/` 폴더에 생성되며 `public/index.html`이 홈 페이지입니다. (`public/`은 Git에 올리지 않습니다.)
 
