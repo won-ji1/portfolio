@@ -4,3 +4,11 @@ body {
     word-break: keep-all;
     overflow-wrap: anywhere;
 }
+
+/* 홈·활동 목록 카드 요약: 테마 기본값은 2줄에서 잘라 "…" 처리 → 390px 화면에서
+   "1차 결과 대…"처럼 활동 상태가 잘려 보임. 요약 전체를 보이도록 해제 */
+.post-entry .entry-content {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
