@@ -1,6 +1,6 @@
 ---
 title: "활동"
-description: "한지원의 활동 기록 — 대표 활동은 로스쿨 진학 준비입니다."
+description: "활동별 기간·상태·목적·역할·과정·결과를 정리한 기록"
 hidemeta: true
 ---
 
