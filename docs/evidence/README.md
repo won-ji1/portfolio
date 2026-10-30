@@ -3,6 +3,8 @@
 | 파일 | 내용 | URL | 캡처 시각 (KST) | 화면 폭 | 캡처 |
 | --- | --- | --- | --- | --- | --- |
 | `fig01_live_home_first_deploy.png` | 1차 배포 직후 공개 홈 화면 (어두운 테마). 첫 문단 끝 "것입니/다"처럼 한국어 단어가 중간에서 줄바꿈되는 문제 확인 | https://won-ji1.github.io/portfolio/ | 2026-10-31 02:25 | 브라우저 창 약 1896px | 본인 (Chrome) |
+| `fig02_live_1440.png` | 2차 배포(커밋 70320f1, [Actions 실행](https://github.com/won-ji1/portfolio/actions/runs/41099966347)) 후 공개 홈 화면. 어절 단위 줄바꿈, 하단 "사이트 소스 코드" 링크 반영 확인 | https://won-ji1.github.io/portfolio/ | 2026-10-31 03:10 | 1440px (Chrome 기기 모드, 2배율 저장 2880px) | 본인 (Chrome) |
+| `fig03_live_390.png` | 같은 화면 모바일 폭. 단어 중간 줄바꿈 없음("있습니다.", "것입니다."), 메뉴 3개 표시, 가로 넘침 없음 | https://won-ji1.github.io/portfolio/ | 2026-10-31 03:11 | 390px (Chrome 기기 모드, 2배율 저장 780px) | 본인 (Chrome) |
 
 ## 자동 점검 결과 (`docs/evidence/auto/`)
 
