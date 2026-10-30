@@ -7,10 +7,10 @@
 사용법 (저장소 최상위 폴더):
   pip install playwright && python -m playwright install chromium
   # 공개 사이트 점검
-  python docs/tools/check_site.py https://won-ji1.github.io/portfolio/ docs/evidence/auto
+  python docs/tools/check_site.py https://won-ji1.github.io/portfolio/ check-output
   # 배포 전 로컬 빌드 점검: 공개 주소 요청을 public/ 폴더 파일로 응답
   python .github/pages_build.py --build
-  python docs/tools/check_site.py https://won-ji1.github.io/portfolio/ docs/evidence/auto public
+  python docs/tools/check_site.py https://won-ji1.github.io/portfolio/ check-output public
 결과: OUTDIR/report.json 과 화면 캡처 PNG
 """
 import json, sys, re, urllib.parse

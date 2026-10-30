@@ -108,10 +108,10 @@ macOS·Linux에서 `python` 명령이 없으면 `python3`으로 바꿔 입력합
 ```bash
 pip install playwright
 python -m playwright install chromium
-python docs/tools/check_site.py https://won-ji1.github.io/portfolio/ docs/evidence/auto
+python docs/tools/check_site.py https://won-ji1.github.io/portfolio/ check-output
 ```
 
-`docs/evidence/auto/report.json`의 `issues`가 빈 목록이면 결함이 없는 것입니다. 점검 기록과 화면 캡처는 [`docs/evidence/`](docs/evidence/README.md)에 있습니다.
+결과는 `check-output/` 폴더(Git에서 제외)에 저장되며, `check-output/report.json`의 `issues`가 빈 목록이면 결함이 없는 것입니다. 제출용으로 남긴 점검 결과는 `docs/evidence/auto/`에 있습니다. 점검 기록과 화면 캡처는 [`docs/evidence/`](docs/evidence/README.md)에 있습니다.
 
 ## 7. 출처와 이용 조건
 

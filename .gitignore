@@ -23,3 +23,6 @@ desktop.ini
 .idea/
 *.swp
 *.log
+
+# 자동 점검 스크립트 실행 결과 (제출용 근거는 docs/evidence/에 따로 보관)
+/check-output/
