@@ -46,3 +46,11 @@ summary:focus-visible {
         transform: none;
     }
 }
+
+/* 404 안내: 테마가 첫 글 요약(.first-entry .entry-content)을 3줄로 잘라(line-clamp) 390px에서
+   '소개'·'활동' 링크가 보이지 않고 '홈으로 돌아가기…'로 잘리던 문제 → 404 페이지는 전체 표시 */
+.not-found-page .entry-content {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
