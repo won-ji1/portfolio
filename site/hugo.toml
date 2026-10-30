@@ -61,3 +61,9 @@ Content = """
 name = "github"
 title = "GitHub (won-ji1)"
 url = "https://github.com/won-ji1"
+
+# 검색엔진 노출 차단: 모든 페이지에 <meta name="robots" content="noindex, nofollow"> 출력
+# (링크로 직접 방문하는 것은 그대로 가능. 프로젝트 사이트는 도메인 최상위 robots.txt를 쓸 수 없어 meta 태그 사용)
+[[cascade]]
+[cascade.params]
+robotsNoIndex = true
