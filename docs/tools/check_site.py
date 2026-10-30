@@ -13,6 +13,7 @@
   python docs/tools/check_site.py https://won-ji1.github.io/portfolio/ docs/evidence/auto public
 결과: OUTDIR/report.json 과 화면 캡처 PNG
 """
+import json, sys, re, urllib.parse
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
