@@ -86,3 +86,18 @@ python .github/pages_build.py --build
 4. **공개 화면 확인:** <https://won-ji1.github.io/portfolio/> 를 새로고침해 변경 내용이 보이는지 확인합니다. 캐시 때문에 이전 화면이 보이면 `Ctrl + Shift + R`(Mac: `Cmd + Shift + R`)로 강력 새로고침합니다.
 
 처음 한 번은 GitHub 저장소의 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 설정해야 합니다. 설정 전 첫 실행이 실패했다면 설정 후 Actions 화면에서 **Re-run jobs**를 누릅니다.
+
+## 6. 출처와 이용 조건
+
+| 자료 | 사용 위치 | 구분 | 출처·이용 조건 |
+| --- | --- | --- | --- |
+| PaperMod 테마 | `site/themes/template/` (원본: 저장소 최상위) | 외부 자료 | <https://github.com/adityatelange/hugo-PaperMod> · MIT License, 고지 파일 `LICENSE`·`site/themes/template/LICENSE` 유지, 사이트 하단 "Powered by Hugo & PaperMod" 표기 유지 |
+| PaperMod 원본 README | `site/themes/template/README.md` | 외부 자료 | 위와 같음 |
+| Hugo | 빌드 도구 | 외부 도구 | <https://gohugo.io/> · Apache License 2.0 |
+| 배포 준비 스크립트 | `prepare_github_pages.py`, `.github/pages_build.py`, `.github/workflows/hugo-pages.yml`, `site/pages.json`, `.github-pages.json` | 수업 제공 자료 | 2026학년도 초급프로젝트 과제 1 제공 스크립트 3.1이 생성 |
+| 소개·활동 글의 내용 | `site/content/` | 직접 작성 | 본인 경험·계획. 문장 다듬기와 페이지 구성에 AI(Claude) 도움을 받음 |
+| 대표 활동 흐름도 `timeline.svg` | `site/content/activities/law-school/` | AI 생성 | 본인이 제공한 활동 내용을 바탕으로 AI(Claude)가 SVG 코드로 작성 |
+| 파비콘 (`favicon.ico` 등 5개) | `site/static/` | AI 생성 | AI(Claude)가 Python Pillow로 생성. 글꼴: Noto Sans CJK (SIL Open Font License) |
+| 사이트 설정·화면 수정 | `site/hugo.toml`, `site/layouts/`, `site/assets/css/extended/` | AI 도움 + 본인 확인 | AI(Claude)가 작성하고 본인이 사이트에서 동작을 확인 |
+
+AI 도움을 받은 커밋에는 커밋 메시지 끝에 `Co-Authored-By: Claude` 표시를 남겼습니다.
