@@ -35,11 +35,14 @@ summary:focus-visible {
 
 /* '맨 위로' 버튼: 테마는 화면 오른쪽 아래에 고정(position: fixed)해 두어, 좁은 화면에서는
    스크롤하는 동안 본문 오른쪽 끝의 링크·흐름도 이미지를 가릴 수 있음.
-   폭 600px 이하에서는 고정을 풀고 페이지 맨 아래(하단 정보 다음)에 놓아 본문을 가리지 않게 함 */
-@media (max-width: 600px) {
-    .top-link {
+   폭 900px 이하에서는 고정을 풀고 페이지 맨 아래(하단 정보 다음)에 놓아 본문을 가리지 않게 함.
+   테마의 목록 페이지 규칙(.list .top-link { transform: translateY(-5rem) })도 해제해 하단 링크와 겹치지 않게 함 */
+@media (max-width: 900px) {
+    .top-link,
+    .list .top-link {
         position: static;
         display: block;
         margin: 0 auto 24px;
+        transform: none;
     }
 }
