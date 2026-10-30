@@ -6,7 +6,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -64,7 +64,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -107,7 +107,6 @@
     "https://github.com/won-ji1",
     "../activities/law-school/",
     "#interest",
-    "../activities/portfolio-site/",
     "#goals",
     "../activities/law-school/#lessons",
     "#skills",
@@ -136,7 +135,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -200,7 +199,7 @@
     }
    ],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -293,7 +292,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -355,13 +354,67 @@
    "lang": "ko",
    "title": "포트폴리오 사이트 제작 (초급프로젝트 과제 1) | 한지원"
   },
+  "1440:no-such-page/deep/": {
+   "scrollW": 1440,
+   "innerW": 1440,
+   "over": [],
+   "imgs": [],
+   "css": [
+    277
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1023,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 1091,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 1159,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "/portfolio/about/",
+    "/portfolio/activities/",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:페이지를 찾을 수 없습니다 (404)"
+   ],
+   "lang": "ko",
+   "title": "페이지를 찾을 수 없습니다 (404) | 한지원"
+  },
   "768:home": {
    "scrollW": 768,
    "innerW": 768,
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -419,7 +472,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -462,7 +515,6 @@
     "https://github.com/won-ji1",
     "../activities/law-school/",
     "#interest",
-    "../activities/portfolio-site/",
     "#goals",
     "../activities/law-school/#lessons",
     "#skills",
@@ -491,7 +543,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -555,7 +607,7 @@
     }
    ],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -648,7 +700,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -710,13 +762,67 @@
    "lang": "ko",
    "title": "포트폴리오 사이트 제작 (초급프로젝트 과제 1) | 한지원"
   },
+  "768:no-such-page/deep/": {
+   "scrollW": 768,
+   "innerW": 768,
+   "over": [],
+   "imgs": [],
+   "css": [
+    277
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 565,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 623,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 681,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "/portfolio/about/",
+    "/portfolio/activities/",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:페이지를 찾을 수 없습니다 (404)"
+   ],
+   "lang": "ko",
+   "title": "페이지를 찾을 수 없습니다 (404) | 한지원"
+  },
   "390:home": {
    "scrollW": 390,
    "innerW": 390,
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -774,7 +880,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -817,7 +923,6 @@
     "https://github.com/won-ji1",
     "../activities/law-school/",
     "#interest",
-    "../activities/portfolio-site/",
     "#goals",
     "../activities/law-school/#lessons",
     "#skills",
@@ -846,7 +951,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -910,7 +1015,7 @@
     }
    ],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -1003,7 +1108,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -1065,13 +1170,67 @@
    "lang": "ko",
    "title": "포트폴리오 사이트 제작 (초급프로젝트 과제 1) | 한지원"
   },
+  "390:no-such-page/deep/": {
+   "scrollW": 390,
+   "innerW": 390,
+   "over": [],
+   "imgs": [],
+   "css": [
+    277
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 187,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 245,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 303,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "/portfolio/about/",
+    "/portfolio/activities/",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:페이지를 찾을 수 없습니다 (404)"
+   ],
+   "lang": "ko",
+   "title": "페이지를 찾을 수 없습니다 (404) | 한지원"
+  },
   "360:home": {
    "scrollW": 360,
    "innerW": 360,
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -1129,7 +1288,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -1172,7 +1331,6 @@
     "https://github.com/won-ji1",
     "../activities/law-school/",
     "#interest",
-    "../activities/portfolio-site/",
     "#goals",
     "../activities/law-school/#lessons",
     "#skills",
@@ -1201,7 +1359,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -1265,7 +1423,7 @@
     }
    ],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -1358,7 +1516,7 @@
    "over": [],
    "imgs": [],
    "css": [
-    276
+    277
    ],
    "menu": [
     {
@@ -1419,11 +1577,65 @@
    ],
    "lang": "ko",
    "title": "포트폴리오 사이트 제작 (초급프로젝트 과제 1) | 한지원"
+  },
+  "360:no-such-page/deep/": {
+   "scrollW": 360,
+   "innerW": 360,
+   "over": [],
+   "imgs": [],
+   "css": [
+    277
+   ],
+   "menu": [
+    {
+     "t": "소개",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 157,
+     "y": 0
+    },
+    {
+     "t": "활동",
+     "h": 60,
+     "w": 44,
+     "vis": true,
+     "x": 215,
+     "y": 0
+    },
+    {
+     "t": "GitHub",
+     "h": 60,
+     "w": 73,
+     "vis": true,
+     "x": 273,
+     "y": 0
+    }
+   ],
+   "anchors": [
+    "#main-content",
+    "https://won-ji1.github.io/portfolio/",
+    "https://won-ji1.github.io/portfolio/about/",
+    "https://won-ji1.github.io/portfolio/activities/",
+    "https://github.com/won-ji1",
+    "/portfolio/",
+    "/portfolio/about/",
+    "/portfolio/activities/",
+    "https://github.com/won-ji1/portfolio",
+    "https://gohugo.io/?utm_source=papermod",
+    "https://github.com/adityatelange/hugo-PaperMod/",
+    "#top"
+   ],
+   "hs": [
+    "H1:페이지를 찾을 수 없습니다 (404)"
+   ],
+   "lang": "ko",
+   "title": "페이지를 찾을 수 없습니다 (404) | 한지원"
   }
  },
  "issues": [],
  "browser": "Chromium 153.0.8010.12",
- "internal_links_checked": 36,
+ "internal_links_checked": 38,
  "resize_ok": true,
  "tab_order": [
   {
@@ -1549,7 +1761,36 @@
  "anchor_reload": [
   "https://won-ji1.github.io/portfolio/about/#goals",
   true,
-  61
+  0
+ ],
+ "favicons": {
+  "favicon.ico": 200,
+  "favicon-16x16.png": 200,
+  "favicon-32x32.png": 200,
+  "apple-touch-icon.png": 200,
+  "safari-pinned-tab.svg": 200
+ },
+ "checked_for": [
+  "overflow",
+  "failed_requests",
+  "console_errors",
+  "images_alt_ratio",
+  "css",
+  "menu_touch",
+  "anchors",
+  "internal_links",
+  "resize",
+  "tab_focus",
+  "enter_back",
+  "zoom200",
+  "toplink_overlap",
+  "theme_enter",
+  "anchor_reload",
+  "clipped_content",
+  "local_http_refs",
+  "favicons",
+  "skip_link",
+  "404"
  ],
  "first_tab": [
   "본문 바로가기",

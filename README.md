@@ -129,3 +129,5 @@ python docs/tools/check_site.py https://won-ji1.github.io/portfolio/ check-outpu
 | 사이트 설정·화면 수정 | `site/hugo.toml`, `site/layouts/`, `site/assets/css/extended/` | AI 도움 + 본인 확인 | AI(Claude)가 작성하고 본인이 사이트에서 동작을 확인 |
 
 AI 도움을 받은 커밋에는 커밋 메시지 끝에 `Co-Authored-By: Claude` 표시를 남겼습니다.
+
+커밋 메시지 정정: `e7f0783`(흐름도)·`56ac93d`(파비콘)의 "직접 제작한"은 위 표대로 **AI 생성**(본인이 제공한 내용 기반)이 맞습니다. `2e732cc`에서 제거한 임시 title 값은 "portfolio"가 아니라 "hugo-papermod"입니다.
