@@ -4,7 +4,7 @@
 앵커 대상 존재, 내부 링크 200 응답, 폭 변경 후 메뉴 유지, Tab 순서·초점 표시, Enter 이동·뒤로 가기,
 200% 확대(720px), 본문 바로가기, 404 페이지,
 '맨 위로' 버튼 겹침(모든 페이지·폭, 창 높이 900/420px에서 스크롤), 테마 버튼 Enter 전환, 앵커 주소 새로고침,
-잘린 내용(overflow 숨김으로 링크·글이 가려짐, 404 포함), HTML의 localhost·127.0.0.1·file:·http: 참조, 파비콘 응답.
+잘린 내용(overflow 숨김으로 링크·글이 가려짐, 404 포함), 초점 테두리 잘림, HTML의 localhost·127.0.0.1·file:·http: 참조, 파비콘 응답.
 
 사용법 (저장소 최상위 폴더):
   pip install playwright && python -m playwright install chromium
@@ -157,11 +157,18 @@ with sync_playwright() as p:
         page.keyboard.press('Tab')
         tabs.append(page.evaluate('''() => { const e = document.activeElement; const s = getComputedStyle(e);
            return {tag: e.tagName, text: (e.getAttribute('aria-label') || e.textContent || '').trim().slice(0, 25), href: e.getAttribute('href'),
-                   outline: s.outlineStyle + ' ' + s.outlineWidth, shadow: s.boxShadow, visible: e.getBoundingClientRect().width > 0} }'''))
+                   outline: s.outlineStyle + ' ' + s.outlineWidth, shadow: s.boxShadow, visible: e.getBoundingClientRect().width > 0,
+                   clipped: (() => { const ext = Math.max(0, parseFloat(s.outlineWidth) + parseFloat(s.outlineOffset || 0)); const r = e.getBoundingClientRect();
+                     let p = e.parentElement; while (p && p !== document.documentElement) { const ps = getComputedStyle(p);
+                       if (ps.overflowX !== 'visible' || ps.overflowY !== 'visible') { const pr = p.getBoundingClientRect();
+                         if (r.left - ext < pr.left - 0.5 || r.right + ext > pr.right + 0.5 || r.top - ext < pr.top - 0.5 || r.bottom + ext > pr.bottom + 0.5) return p.id || p.className || p.tagName; }
+                       p = p.parentElement; } return false; })()} }'''))
     report['tab_order'] = tabs
     for t in tabs:
         if t['outline'].startswith('none') and t['shadow'] == 'none':
             issue(f'focus not visible on {t}'); break
+        if t['clipped']:
+            issue(f'focus outline clipped by {t["clipped"]}: {t["text"]}')  # 초점 테두리가 overflow 영역에 잘림
     page.screenshot(path=str(OUT / 'keyboard_focus.png'))
     # Enter on focused menu link navigates (P42)
     page.goto(BASE, wait_until='networkidle')
@@ -212,7 +219,7 @@ with sync_playwright() as p:
     after = tp.evaluate('document.documentElement.dataset.theme')
     report['theme_toggle_enter'] = [before, after]
     if before == after: issue('theme toggle did not change on Enter')
-    tp.goto(BASE + 'about/#goals', wait_until='networkidle'); tp.reload(wait_until='networkidle')
+    tp.goto(BASE + 'about/#goals', wait_until='networkidle'); tp.reload(wait_until='networkidle'); tp.wait_for_timeout(800)  # 앵커 위치로 스크롤이 끝난 뒤 측정
     report['anchor_reload'] = tp.evaluate("""() => [location.href, !!document.getElementById('goals'), Math.round(document.getElementById('goals').getBoundingClientRect().top)]""")
     if not report['anchor_reload'][1]: issue('anchor target missing after reload')
     tc.close()
@@ -224,7 +231,7 @@ with sync_playwright() as p:
             fav[f] = (200 if (PUBLIC / f).is_file() else 404) if PUBLIC else fv.request.get(BASE + f).status
     report['favicons'] = fav
     if any(v != 200 for v in fav.values()): issue(f'favicon status {fav}')
-    report['checked_for'] = ['overflow', 'failed_requests', 'console_errors', 'images_alt_ratio', 'css', 'menu_touch', 'anchors', 'internal_links', 'resize', 'tab_focus', 'enter_back', 'zoom200', 'toplink_overlap', 'theme_enter', 'anchor_reload', 'clipped_content', 'local_http_refs', 'favicons', 'skip_link', '404']
+    report['checked_for'] = ['overflow', 'failed_requests', 'console_errors', 'images_alt_ratio', 'css', 'menu_touch', 'anchors', 'internal_links', 'resize', 'tab_focus', 'enter_back', 'zoom200', 'toplink_overlap', 'theme_enter', 'anchor_reload', 'clipped_content', 'focus_outline_clipping', 'local_http_refs', 'favicons', 'skip_link', '404']
     # Skip link and 404
     q = br.new_context(viewport={'width': 390, 'height': 844}).new_page()
     q.goto(BASE + 'activities/law-school/', wait_until='networkidle')
